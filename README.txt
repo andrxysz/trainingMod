@@ -1,59 +1,32 @@
--------------------------------------------
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+# Mod - Training Mod (Forge 1.8.9)
 
-Note also that the patches are built against "unrenamed" MCP source code (aka
-srgnames) - this means that you will not be able to read them directly against
-normal code.
+Mod server-side para treino de mira/PvP com um BOT IA humanoide.
 
-Source pack installation information:
+## Requisitos do ambiente
 
-Standalone source installation
-==============================
+- Minecraft Forge: `1.8.9-11.15.1.2318`
+- Java para build do MDK antigo: **JDK 8**
 
-Step 1: Open your command-line and browse to the folder where you extracted the zip file.
+## Comandos
 
-Step 2: Once you have a command window up in the folder that the downloaded material was placed, type:
+- `/trainingmod spawn <hard|easy|normal|extreme>`
+- `/trainingmod knockback <default|hacking|long-normal>`
 
-Windows: "gradlew setupDecompWorkspace"
-Linux/Mac OS: "./gradlew setupDecompWorkspace"
+## Comportamentos
 
-Step 3: After all that finished, you're left with a choice.
-For eclipse, run "gradlew eclipse" (./gradlew eclipse if you are on Mac/Linux)
+- Bot renderizado com modelo de player.
+- Skin do bot usa a skin do jogador que spawnou.
+- NPC persegue e ataca o jogador mais proximo.
+- Dificuldade altera alcance de hit do NPC:
+  - `easy`: 2.6
+  - `normal`: 3.0
+  - `hard`: 3.35
+  - `extreme`: 3.7
+- Knockback recebido pelo NPC:
+  - `default`: padrao
+  - `hacking`: quase sem knockback
+  - `long-normal`: knockback normal um pouco mais longo
+- Alguns ataques podem falhar para deixar mais humanizado.
 
-If you preffer to use IntelliJ, steps are a little different.
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Once it's finished you must close IntelliJ and run the following command:
+## 
 
-"gradlew genIntellijRuns" (./gradlew genIntellijRuns if you are on Mac/Linux)
-
-Step 4: The final step is to open Eclipse and switch your workspace to /eclipse/ (if you use IDEA, it should automatically start on your project)
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can run "gradlew --refresh-dependencies" to refresh the local cache. "gradlew clean" to reset everything {this does not effect your code} and then start the processs again.
-
-Should it still not work, 
-Refer to #ForgeGradle on EsperNet for more information about the gradle environment.
-
-Tip:
-If you do not care about seeing Minecraft's source code you can replace "setupDecompWorkspace" with one of the following:
-"setupDevWorkspace": Will patch, deobfusicated, and gather required assets to run minecraft, but will not generated human readable source code.
-"setupCIWorkspace": Same as Dev but will not download any assets. This is useful in build servers as it is the fastest because it does the least work.
-
-Tip:
-When using Decomp workspace, the Minecraft source code is NOT added to your workspace in a editable way. Minecraft is treated like a normal Library. Sources are there for documentation and research purposes and usually can be accessed under the 'referenced libraries' section of your IDE.
-
-Forge source installation
-=========================
-MinecraftForge ships with this code and installs it as part of the forge
-installation process, no further action is required on your part.
-
-LexManos' Install Video
-=======================
-https://www.youtube.com/watch?v=8VEdtQLuLO0&feature=youtu.be
-
-For more details update more often refer to the Forge Forums:
-http://www.minecraftforge.net/forum/index.php/topic,14048.0.html

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "trainingmod",
+  "name": "Training Mod",
+  "description": "Mod de treino PvP client-side para Minecraft 1.8.9 com NPC de combate configuravel.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["marques"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

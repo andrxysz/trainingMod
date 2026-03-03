@@ -1,6 +1,6 @@
-# Training Mod (Forge 1.8.9)
+# Mod - Training Mod (Forge 1.8.9)
 
-Projeto client-side para treino de mira/PvP com NPC humanoide.
+Mod server-side para treino de mira/PvP com um BOT IA humanoide.
 
 ## Requisitos do ambiente
 
@@ -12,10 +12,10 @@ Projeto client-side para treino de mira/PvP com NPC humanoide.
 - `/trainingmod spawn <hard|easy|normal|extreme>`
 - `/trainingmod knockback <default|hacking|long-normal>`
 
-## Comportamento implementado
+## Comportamentos
 
-- NPC nao-zombie, renderizado com modelo de player.
-- Skin do NPC usa o perfil (skin) do jogador que spawnou.
+- Bot renderizado com modelo de player.
+- Skin do bot usa a skin do jogador que spawnou.
 - NPC persegue e ataca o jogador mais proximo.
 - Dificuldade altera alcance de hit do NPC:
   - `easy`: 2.6
@@ -26,15 +26,7 @@ Projeto client-side para treino de mira/PvP com NPC humanoide.
   - `default`: padrao
   - `hacking`: quase sem knockback
   - `long-normal`: knockback normal um pouco mais longo
-- Ataques podem falhar ocasionalmente para ficar menos mecanico.
+- Alguns ataques podem falhar para deixar mais humanizado.
 
-## Estrutura de codigo
-
-- `br.mod.trainingmod.TrainingMod` - entrada do mod.
-- `br.mod.trainingmod.proxy` - registro client-side.
-- `br.mod.trainingmod.command` - comando `/trainingmod`.
-- `br.mod.trainingmod.entity` - entidade do NPC.
-- `br.mod.trainingmod.entity.ai` - IA de combate.
-- `br.mod.trainingmod.session` - estado da sessao de treino.
-- `br.mod.trainingmod.client.render` - render humanoide + skin.
+## 
 
